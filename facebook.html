@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="facebook.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="http://erikflowers.github.io/weather-icons/">
+    <script src="facebook.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a class="button" href="#popup1">
+            <h1>facebook</h1>
+        </a>
+    </div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+
+            <img src="clouds.jpg" class="natureimage">
+            <a class="close" href="#">&times;</a>
+            <p style="top:32;position:absolute;color:#D8D8D8;font-weight:bold;font-size:15px;margin-left: 6">Mostly sunny</p>
+            <div id="weather" style="top:5;position:absolute;color:white;font-size:25px;margin-left:5"></div>
+            <img src="cloud.png" align="right" hspace="50" vspace="50" />
+            <p id="temp" style="font-size:80px;"></p>
+            <table>
+                <tr>
+                    <td> <img src="wind.png" align="left" height=20>
+                        <td>
+                            <p id="wind"></p>
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="humid.jpg" height=20 align="left">
+                    </td>
+                    <td>
+                        <p id="humid"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <img src="latlng.jpg" align="left" height=20>
+                        <td>
+                            <p id="lat"></p>
+                        </td>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <img src="latlng.jpg" height=20 align="left">
+                        <td>
+                            <p id="log"></p>
+                        </td>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+    <script src="facebook.js"></script>
+
+    <div class="row">
+        <div class="side">
+            <br><br>
+            <h2>Facebook helps you connect and share with the<br> people in your life</h2>
+            <img src="face.png" style="height:200px;justify-content:flex-end;align-items: flex-end;margin-left:20%">
+        </div>
+        <div class="main">
+            <form name="form1">
+                <table>
+                    <tr>
+                        <td> <label>First_Name:</label></td>
+                        <td> <input type="text" name="first" id="firstname" required onblur="checkforfirstname()">
+                        </td>
+                        <td>
+                            <div class="pop">
+                                <span id="username"></span></div>
+                        </td>
+                    </tr><br/>
+                    <tr>
+                        <td><label>Last_Name:</label></td>
+                        <td>
+                            <input type="text" name="last" id="lastname" onblur="checkforlastname()">
+                        </td>
+                        <td>
+                            <div class="pop">
+                                <span id="username1"></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>DOB:</label></td>
+                        <td> <input type="date" name="date" step="1" max="1997-12-31">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><label>Age:</label></td>
+                        <td> <input type="number" name="age" min="21" max="100" step="1">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td> <input type="email" name="email" id="email" onblur="validateemail()">
+                        </td>
+                        <td>
+                            <div class="pop"><span id="mails"></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label>Confirm:</label></td>
+                        <td> <input type="email" name="Confirmemail" id="crosscheck" onblur="confirmmail()">
+                        </td>
+                        <td>
+                            <div class="pop"><span id="con"></span></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Phoneno.</label></td>
+                        <td> <input type="number" max=10 name="Phoneno" onblur="phonenumber()">
+                        </td>
+                        <td>
+                            <div class="pop"><span id="phones"></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Life Goals</label></td>
+                        <td> <textarea maxlength="150" name="goals"></textarea>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><label>Hobbies</label></td>
+                        <td><input type="text" name="hobbies" list="l2"><datalist id="l2">
+                                        <option>Dancing</option>
+                                        <option>Singing</option>
+                                        <option>Drawing</option>
+                                        <option>Painting</option>
+                                        <option>Watching Movie</option>
+                                        <option>Collecting money</option>
+                                        <option>Playing</option>
+                                        <option>Choreographing</option>
+                                </datalist>
+                        </td>
+                    </tr>
+
+
+                </table>
+                <p class="btn">
+
+                    <button class="btn1">RESET</button><button class="btn2">SUBMIT</button>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
